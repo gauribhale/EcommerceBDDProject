@@ -1,0 +1,288 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-04-03T11:24:45.873Z",
+        "before": [
+          {
+            "result": {
+              "duration": 39191000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.automation.stepdefinition.CucumberHooks.setUp()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Create Account using sign in link",
+        "description": "",
+        "id": "create-account-feature;create-account-using-sign-in-link",
+        "after": [
+          {
+            "result": {
+              "duration": 5114000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.automation.stepdefinition.CucumberHooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 21000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on Home Page",
+            "match": {
+              "location": "com.automation.stepdefinition.CreateAccountStepDefinition.user_is_on_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4259000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicks on Sign In link",
+            "match": {
+              "location": "com.automation.stepdefinition.CreateAccountStepDefinition.user_clicks_on_sign_in_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 759000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user enter emailid",
+            "match": {
+              "location": "com.automation.stepdefinition.CreateAccountStepDefinition.user_enter_emailid(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "gouribha@yahoo.com"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 112000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user clicks on Create Account button",
+            "match": {
+              "location": "com.automation.stepdefinition.CreateAccountStepDefinition.user_clicks_on_create_account_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1986000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enters personal information of firstname, lastname and password",
+            "match": {
+              "location": "com.automation.stepdefinition.CreateAccountStepDefinition.user_enters_personal_information_of_firstname_lastname_and_password(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "James",
+                  "Bond",
+                  "jamesbond"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3369000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enters address information",
+            "match": {
+              "location": "com.automation.stepdefinition.CreateAccountStepDefinition.user_enters_address_information(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "James",
+                  "Bond",
+                  "Tesla",
+                  "main road, Tempe",
+                  "Tempe",
+                  "Arizona",
+                  "12345",
+                  "United States",
+                  "9823564578",
+                  "Florida"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2595000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user clicks on Register button",
+            "match": {
+              "location": "com.automation.stepdefinition.CreateAccountStepDefinition.user_clicks_on_register_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user is on My Account page",
+            "match": {
+              "location": "com.automation.stepdefinition.CreateAccountStepDefinition.user_is_on_my_account_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Create Account feature",
+    "description": "  Sign in link provides create account feature",
+    "id": "create-account-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/com/automation/features/CreateAccountFeature.feature",
+    "tags": []
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-04-03T11:25:43.317Z",
+        "before": [
+          {
+            "result": {
+              "duration": 44720000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.automation.stepdefinition.CucumberHooks.setUp()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Login using sign in link",
+        "description": "",
+        "id": "login-feature;login-using-sign-in-link;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1714000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.automation.stepdefinition.CucumberHooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 28000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on home page",
+            "match": {
+              "location": "com.automation.stepdefinition.LoginStepDefinition.user_is_on_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3034000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicks on sign in link",
+            "match": {
+              "location": "com.automation.stepdefinition.LoginStepDefinition.user_clicks_on_sign_in_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 745000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user enters \"gouri_bhale@yahoo.com\" and \"jamesbond\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "gouri_bhale@yahoo.com",
+                  "offset": 13
+                },
+                {
+                  "val": "jamesbond",
+                  "offset": 41
+                }
+              ],
+              "location": "com.automation.stepdefinition.LoginStepDefinition.user_enters_emailid_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2820000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user clicks on sign in button",
+            "match": {
+              "location": "com.automation.stepdefinition.LoginStepDefinition.user_clicks_on_sign_in_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user is on my account page",
+            "match": {
+              "location": "com.automation.stepdefinition.LoginStepDefinition.user_is_on_my_account_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Feature",
+    "description": "  Sign in link provides login feature",
+    "id": "login-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/com/automation/features/LoginFeature.feature",
+    "tags": []
+  }
+]

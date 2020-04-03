@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="EcommerceProject Tests"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="110.680">
+  <properties />
+  
+  
+            <testcase name="runScenario" time="53.083" classname="com.automation.testrunner.Runner" />
+                <testcase name="runScenario" time="57.597" classname="com.automation.testrunner.Runner" />
+      
+</testsuite>
