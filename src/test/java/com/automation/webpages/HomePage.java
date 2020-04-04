@@ -17,9 +17,9 @@ public class HomePage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 		
-	public SignInPage clickOnSignInLink() {
+	public LoginPage clickOnSignInLink() {
 		clickOn(signin_Btn);
-		return new SignInPage();
+		return new LoginPage();
 	}
 	
 	

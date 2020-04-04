@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.automation.pagelocators.SignInPageObjects;
 import com.automation.util.TestBase;
 
-public class SignInPage extends TestBase{
+public class LoginPage extends TestBase{
 
 	@FindBy(how=How.XPATH,using=SignInPageObjects.createAc_email)
 	public static WebElement createAc_email;
@@ -67,7 +67,7 @@ public class SignInPage extends TestBase{
 	@FindBy(how=How.XPATH,using=SignInPageObjects.signin_Btn)
 	public static WebElement signin_Btn;
 	
-	public SignInPage() {
+	public LoginPage() {
 		PageFactory.initElements(driver, this);
 	}
 	

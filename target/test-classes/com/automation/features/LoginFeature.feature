@@ -10,5 +10,5 @@ Feature: Login Feature
     Then user is on my account page
 
     Examples: 
-      | emailid               | password  |
-      | gouri_bhale@yahoo.com | jamesbond |
+      | emailid               | password    |
+      | donald@gmail.com | donaldtrump |

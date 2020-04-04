@@ -3,11 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-04-03T11:24:45.873Z",
+        "start_timestamp": "2020-04-04T13:00:13.305Z",
         "before": [
           {
             "result": {
-              "duration": 39191000000,
+              "duration": 21881000000,
               "status": "passed"
             },
             "match": {
@@ -22,7 +22,7 @@
         "after": [
           {
             "result": {
-              "duration": 5114000000,
+              "duration": 203000000,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 21000000,
+              "duration": 14000000,
               "status": "passed"
             },
             "line": 6,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 4259000000,
+              "duration": 9090000000,
               "status": "passed"
             },
             "line": 7,
@@ -59,107 +59,73 @@
           },
           {
             "result": {
-              "duration": 759000000,
+              "duration": 42000000,
               "status": "passed"
             },
             "line": 8,
-            "name": "user enter emailid",
+            "name": "user is on Login Page",
             "match": {
-              "location": "com.automation.stepdefinition.CreateAccountStepDefinition.user_enter_emailid(io.cucumber.datatable.DataTable)"
+              "location": "com.automation.stepdefinition.CreateAccountStepDefinition.user_is_on_login_page()"
             },
-            "rows": [
-              {
-                "cells": [
-                  "gouribha@yahoo.com"
-                ]
-              }
-            ],
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 112000000,
+              "duration": 7871000000,
               "status": "passed"
             },
-            "line": 10,
-            "name": "user clicks on Create Account button",
+            "line": 9,
+            "name": "user enters personal and address information and clicks on register button",
             "match": {
-              "location": "com.automation.stepdefinition.CreateAccountStepDefinition.user_clicks_on_create_account_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1986000000,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "user enters personal information of firstname, lastname and password",
-            "match": {
-              "location": "com.automation.stepdefinition.CreateAccountStepDefinition.user_enters_personal_information_of_firstname_lastname_and_password(io.cucumber.datatable.DataTable)"
+              "location": "com.automation.stepdefinition.CreateAccountStepDefinition.user_enters_personal_and_address_information_and_clicks_on_register_button(io.cucumber.datatable.DataTable)"
             },
             "rows": [
               {
                 "cells": [
-                  "James",
-                  "Bond",
-                  "jamesbond"
+                  "emailid",
+                  "firstname",
+                  "lastname",
+                  "password",
+                  "company",
+                  "address",
+                  "city",
+                  "state",
+                  "postalcode",
+                  "country",
+                  "mobilephone",
+                  "aliasaddress"
                 ]
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 3369000000,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "user enters address information",
-            "match": {
-              "location": "com.automation.stepdefinition.CreateAccountStepDefinition.user_enters_address_information(io.cucumber.datatable.DataTable)"
-            },
-            "rows": [
+              },
               {
                 "cells": [
-                  "James",
-                  "Bond",
-                  "Tesla",
-                  "main road, Tempe",
-                  "Tempe",
-                  "Arizona",
-                  "12345",
+                  "donaldt@gmail.com",
+                  "Donald",
+                  "Trump",
+                  "donaldtrump",
+                  "Google",
+                  "Trump Tower,Austin",
+                  "Austin",
+                  "Texas",
+                  "56789",
                   "United States",
-                  "9823564578",
-                  "Florida"
+                  "8130479046",
+                  "Austin"
                 ]
               }
             ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2595000000,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "user clicks on Register button",
-            "match": {
-              "location": "com.automation.stepdefinition.CreateAccountStepDefinition.user_clicks_on_register_button()"
-            },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 6000000,
+              "duration": 13000000,
               "status": "passed"
             },
-            "line": 16,
+            "line": 12,
             "name": "user is on My Account page",
             "match": {
               "location": "com.automation.stepdefinition.CreateAccountStepDefinition.user_is_on_my_account_page()"
             },
-            "keyword": "And "
+            "keyword": "Then "
           }
         ]
       }
@@ -175,12 +141,13 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-04-03T11:25:43.317Z",
+        "start_timestamp": "2020-04-04T13:00:52.453Z",
         "before": [
           {
             "result": {
-              "duration": 44720000000,
-              "status": "passed"
+              "error_message": "org.openqa.selenium.TimeoutException: timeout\n  (Session info: chrome\u003d80.0.3987.149)\n  (Driver info: chromedriver\u003d2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform\u003dWindows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027WIN\u0027, ip: \u0027192.168.1.4\u0027, os.name: \u0027Windows 8.1\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_241\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\\Users\\dell\\AppData\\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 80.0.3987.149, webStorageEnabled: true}\nSession ID: 1f047383b1239c714c500c762e33c332\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\r\n\tat com.automation.util.TestBase.initialize(TestBase.java:51)\r\n\tat com.automation.stepdefinition.CucumberHooks.setUp(CucumberHooks.java:12)\r\n",
+              "duration": 302704000000,
+              "status": "failed"
             },
             "match": {
               "location": "com.automation.stepdefinition.CucumberHooks.setUp()"
@@ -194,7 +161,7 @@
         "after": [
           {
             "result": {
-              "duration": 1714000000,
+              "duration": 404000000,
               "status": "passed"
             },
             "match": {
@@ -207,8 +174,7 @@
         "steps": [
           {
             "result": {
-              "duration": 28000000,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 6,
             "name": "user is on home page",
@@ -219,8 +185,7 @@
           },
           {
             "result": {
-              "duration": 3034000000,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 7,
             "name": "user clicks on sign in link",
@@ -231,20 +196,19 @@
           },
           {
             "result": {
-              "duration": 745000000,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 8,
-            "name": "user enters \"gouri_bhale@yahoo.com\" and \"jamesbond\"",
+            "name": "user enters \"donald@gmail.com\" and \"donaldtrump\"",
             "match": {
               "arguments": [
                 {
-                  "val": "gouri_bhale@yahoo.com",
+                  "val": "donald@gmail.com",
                   "offset": 13
                 },
                 {
-                  "val": "jamesbond",
-                  "offset": 41
+                  "val": "donaldtrump",
+                  "offset": 36
                 }
               ],
               "location": "com.automation.stepdefinition.LoginStepDefinition.user_enters_emailid_and_password(java.lang.String,java.lang.String)"
@@ -253,8 +217,7 @@
           },
           {
             "result": {
-              "duration": 2820000000,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 9,
             "name": "user clicks on sign in button",
@@ -265,8 +228,7 @@
           },
           {
             "result": {
-              "duration": 11000000,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 10,
             "name": "user is on my account page",
