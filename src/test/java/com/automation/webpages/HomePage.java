@@ -18,7 +18,7 @@ public class HomePage extends TestBase {
 	}
 		
 	public LoginPage clickOnSignInLink() {
-		clickOn(signin_Btn);
+		signin_Btn.click();
 		return new LoginPage();
 	}
 	

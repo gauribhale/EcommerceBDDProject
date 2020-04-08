@@ -21,7 +21,7 @@ public class LoginStepDefinition extends TestBase {
 
 	@Given("^user is on home page$")
 	public void user_is_on_home_page() {
-		String title = checkPageTitle();
+		String title = driver.getTitle();
 		Assert.assertTrue(title.toLowerCase().contains("my store"));
 	}
 
@@ -34,8 +34,8 @@ public class LoginStepDefinition extends TestBase {
 	@Then("^user enters \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void user_enters_emailid_and_password(String emailid, String password) {
 
-		typeIn(LoginPage.reg_email, emailid);
-		typeIn(LoginPage.reg_password, password);
+		loginpage.reg_email.sendKeys(emailid);
+		loginpage.reg_password.sendKeys(password); 
 	}
 
 	@And("^user clicks on sign in button$")
@@ -45,7 +45,7 @@ public class LoginStepDefinition extends TestBase {
 
 	@Then("^user is on my account page$")
 	public void user_is_on_my_account_page() {
-		String title = checkPageTitle();
+		String title = driver.getTitle();
 		Assert.assertTrue(title.toLowerCase().contains("my account"));
 	}
 

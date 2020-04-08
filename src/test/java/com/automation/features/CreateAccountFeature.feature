@@ -8,5 +8,5 @@ Feature: Create Account feature
     Then user is on Login Page
     Then user enters personal and address information and clicks on register button
       | emailid           | firstname | lastname | password    | company | address            | city   | state | postalcode | country       | mobilephone | aliasaddress |
-      | donaldt@gmail.com | Donald    | Trump    | donaldtrump | Google  | Trump Tower,Austin | Austin | Texas |      56789 | United States |  8130479046 | Austin       |
+      | dtrump0@gmail.com | Donald    | Trump    | donaldtrump | Google  | Trump Tower,Austin | Austin | Texas |      56789 | United States |  8130479046 | Austin       |
     Then user is on My Account page

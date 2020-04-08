@@ -3,16 +3,16 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - EcommerceProject Tests</title>
+  <title>Test Results Report - EcommerceProject Test</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>EcommerceProject Tests</h1>
+<h1>EcommerceProject Test</h1>
 <p>
-  Test duration: 343.210s
+  Test duration: 190.600s
 </p>
 
 
@@ -20,7 +20,7 @@
   <table class="resultsTable">
     <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">com.automation.testrunner.Runner</td>
+        <td colspan="3" class="group">com.automation.testrunner.TestRunner</td>
       </tr>
             
 <tr>
@@ -28,23 +28,25 @@
                   <span class="description" title="Runs Cucumber Scenarios">runScenario</span>
       </td>
   <td class="duration">
-    303.121s
+    40.476s
   </td>
   <td class="result">
         
-          <i>Method arguments: </i><span class="arguments">"Login using sign in link", "Login Feature"</span><br />
+          <i>Method arguments: </i><span class="arguments">"Create Account using sign in link", "Create Account feature"</span><br />
     
         
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.TimeoutException: timeout<br/>
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;customer_firstname&apos;]&quot;}<br/>
 &nbsp; (Session info: chrome=80.0.3987.149)<br/>
 &nbsp; (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)<br/>
 Command duration or timeout: 0 milliseconds<br/>
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br/>
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;<br/>
-System info: host: &apos;WIN&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_241&apos;<br/>
+System info: host: &apos;WIN&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_241&apos;<br/>
 Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\dell\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 80.0.3987.149, webStorageEnabled: true}<br/>
-Session ID: 1f047383b1239c714c500c762e33c332</b></a><br />
+Session ID: b3347623fb716c352a4a9231853a6c91<br/>
+*** Element info: {Using=xpath, value=//input[@id=&apos;customer_firstname&apos;]}</b></a><br />
     <div class="stackTrace" id="exception-0">
               sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
               sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)<br />
@@ -58,9 +60,15 @@ Session ID: 1f047383b1239c714c500c762e33c332</b></a><br />
               org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)<br />
               org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br />
               org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)<br />
-              com.automation.util.TestBase.initialize(TestBase.java:51)<br />
-              com.automation.stepdefinition.CucumberHooks.setUp(CucumberHooks.java:12)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)<br />
+              org.openqa.selenium.By$ByXPath.findElement(By.java:353)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)<br />
+              org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)<br />
+              org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)<br />
+              com.sun.proxy.$Proxy21.sendKeys(Unknown Source)<br />
+              com.automation.stepdefinition.CreateAccountStepDefinition.user_enters_personal_and_address_information_and_clicks_on_register_button(CreateAccountStepDefinition.java:47)<br />
+              ?.user enters personal and address information and clicks on register button(file:///D:/TestAutomationProjects/EcommerceProject/src/test/java/com/automation/features/CreateAccountFeature.feature:9)<br />
                 </div>
       </td>
 </tr>
@@ -70,7 +78,7 @@ Session ID: 1f047383b1239c714c500c762e33c332</b></a><br />
   <table class="resultsTable">
     <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">com.automation.testrunner.Runner</td>
+        <td colspan="3" class="group">com.automation.testrunner.TestRunner</td>
       </tr>
             
 <tr>
@@ -78,11 +86,11 @@ Session ID: 1f047383b1239c714c500c762e33c332</b></a><br />
                   <span class="description" title="Runs Cucumber Scenarios">runScenario</span>
       </td>
   <td class="duration">
-    39.302s
+    148.326s
   </td>
   <td class="result">
         
-          <i>Method arguments: </i><span class="arguments">"Create Account using sign in link", "Create Account feature"</span><br />
+          <i>Method arguments: </i><span class="arguments">"Login using sign in link", "Login Feature"</span><br />
     
         
 

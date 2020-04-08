@@ -11,73 +11,73 @@ import com.automation.util.TestBase;
 public class LoginPage extends TestBase{
 
 	@FindBy(how=How.XPATH,using=SignInPageObjects.createAc_email)
-	public static WebElement createAc_email;
+	public WebElement createAc_email;
 	
 	@FindBy(how=How.XPATH,using=SignInPageObjects.createAc_Btn)
-	public static WebElement createAc_Btn;
+	public WebElement createAc_Btn;
 
 	@FindBy(how=How.XPATH,using=SignInPageObjects.firstName)
-	public static WebElement firstName;
+	public WebElement firstName;
 	
 	@FindBy(how=How.XPATH,using=SignInPageObjects.lastName)
-	public static WebElement lastName;
+	public WebElement lastName;
 	
 	@FindBy(how=How.XPATH,using=SignInPageObjects.password)
-	public static WebElement password;
+	public WebElement password;
 	
 	@FindBy(how=How.XPATH,using=SignInPageObjects.add_firstName)
-	public static WebElement add_firstName;
+	public WebElement add_firstName;
 	
 	@FindBy(how=How.XPATH,using=SignInPageObjects.add_lastName)
-	public static WebElement add_lastName;
+	public WebElement add_lastName;
 	
 	@FindBy(how=How.XPATH,using=SignInPageObjects.company)
-	public static WebElement company;
+	public WebElement company;
 	
 	@FindBy(how=How.XPATH,using=SignInPageObjects.address)
-	public static WebElement address;
+	public WebElement address;
 	
 	@FindBy(how=How.XPATH,using=SignInPageObjects.city)
-	public static WebElement city;
+	public WebElement city;
 	
 	@FindBy(how=How.XPATH,using=SignInPageObjects.state)
-	public static WebElement state;
+	public WebElement state;
 	
 	@FindBy(how=How.XPATH,using=SignInPageObjects.postalCode)
-	public static WebElement postalCode;
+	public WebElement postalCode;
 	
 	@FindBy(how=How.XPATH,using=SignInPageObjects.country)
-	public static WebElement country;
+	public WebElement country;
 	
 	@FindBy(how=How.XPATH,using=SignInPageObjects.mobilePhone)
-	public static WebElement mobilePhone;
+	public WebElement mobilePhone;
 	
 	@FindBy(how=How.XPATH,using=SignInPageObjects.address_alias)
-	public static WebElement address_alias;
+	public WebElement address_alias;
 	
 	@FindBy(how=How.XPATH,using=SignInPageObjects.register_Btn)
-	public static WebElement register_Btn;
+	public WebElement register_Btn;
 	
 	@FindBy(how=How.XPATH,using=SignInPageObjects.reg_email)
-	public static WebElement reg_email;
+	public WebElement reg_email;
 	
 	@FindBy(how=How.XPATH,using=SignInPageObjects.reg_password)
-	public static WebElement reg_password;
+	public WebElement reg_password;
 	
 	@FindBy(how=How.XPATH,using=SignInPageObjects.signin_Btn)
-	public static WebElement signin_Btn;
+	public WebElement signin_Btn;
 	
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
 	}
 	
 	public MyAccountPage clickOnRegister() {
-		clickOn(register_Btn);
+		register_Btn.click();
 		return new MyAccountPage();
 	}
 	
 	public MyAccountPage clickOnSignInButton() {
-		clickOn(signin_Btn);
+		signin_Btn.click();
 		return new MyAccountPage();
 	}
 }
