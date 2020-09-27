@@ -1,30 +1,21 @@
 package com.automation.webpages;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.WebDriver;
 
-import com.automation.pagelocators.HomePageObjects;
-import com.automation.util.TestBase;
+import com.automation.BaseClass.BasePage;
+import com.automation.pagelocators.HomePageLocator;
+import com.automation.util.ElementUtility;
 
-public class HomePage extends TestBase {
+public class HomePage extends BasePage {
 
-	@FindBy(how=How.XPATH,using=HomePageObjects.signin_Btn)
-	public WebElement signin_Btn;
-	
-	public HomePage() {
-		PageFactory.initElements(driver, this);
+	private WebDriver _driver;
+	HomePageLocator homePageLoc;
+	ElementUtility elementUtil;
+
+	public HomePage(WebDriver driver) {
+		this._driver = driver;
+		homePageLoc = new HomePageLocator(_driver);
+		elementUtil = new ElementUtility(_driver);
 	}
-		
-	public LoginPage clickOnSignInLink() {
-		signin_Btn.click();
-		return new LoginPage();
-	}
-	
-	
-	
-	
-	
-	
+
 }

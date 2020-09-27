@@ -111,8 +111,9 @@
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>gherkin</artifactId>
-			<version>11.0.0</version>
+			<version>15.0.2</version>
 		</dependency>
+
 
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<!-- <dependency> <groupId>junit</groupId> <artifactId>junit</artifactId> 

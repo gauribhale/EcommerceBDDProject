@@ -1,19 +1,21 @@
 package com.automation.stepdefinition;
 
-import com.automation.util.TestBase;
+import com.automation.BaseClass.BaseTest;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
-public class CucumberHooks extends TestBase {
+public class CucumberHooks {
 
-	@Before
-	public void setUp() {
-		initialize();
+	public BaseTest basetest;
+	@Before	
+	public void BeforeScenario() {
+		basetest=new BaseTest();
+		basetest.setUp();
 	}
 
 	@After
-	public void tearDown() {
-		close();
+	public void AfterScenario() {
+		basetest.tearDown();
 	}
 }

@@ -3,50 +3,54 @@ package com.automation.stepdefinition;
 
 import org.testng.Assert;
 
-
-import com.automation.util.TestBase;
-import com.automation.webpages.HomePage;
+import com.automation.BaseClass.BaseTest;
+import com.automation.util.PageTitles;
 import com.automation.webpages.LoginPage;
-import com.automation.webpages.MyAccountPage;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class LoginStepDefinition extends TestBase {
+public class LoginStepDefinition extends BaseTest {
 
-	HomePage homepage;
-	LoginPage loginpage;
+	LoginPage loginpg;
 
 	@Given("^user is on home page$")
 	public void user_is_on_home_page() {
-		String title = driver.getTitle();
-		Assert.assertTrue(title.toLowerCase().contains("my store"));
+		Assert.assertEquals(topNavigation.getCurrentPageTitle(), PageTitles.HomePageTitle, "Home Page is not loaded");
 	}
 
-	@When("^user clicks on sign in link$")
-	public void user_clicks_on_sign_in_link() {
-		homepage = new HomePage();
-		loginpage = homepage.clickOnSignInLink();
+	@And("^user navigates to login page$")
+	public void user_navigates_to_login_page() {
+		loginpg = topNavigation.goToLoginPage();
+		Assert.assertEquals(topNavigation.getCurrentPageTitle(), PageTitles.LoginPageTitle, "Login Page is not loaded");
 	}
 
-	@Then("^user enters \"([^\"]*)\" and \"([^\"]*)\"$")
-	public void user_enters_emailid_and_password(String emailid, String password) {
+	@When("^user enters valid emailid \"([^\"]*)\" and password \"([^\"]*)\"$")
+	public void user_enters_valid_emailid_and_password(String emailid, String password) {
+		homepg = loginpg.successfulLogin(emailid, password);
 
-		loginpage.reg_email.sendKeys(emailid);
-		loginpage.reg_password.sendKeys(password); 
 	}
 
-	@And("^user clicks on sign in button$")
-	public void user_clicks_on_sign_in_button() {
-		MyAccountPage myaccountpage = loginpage.clickOnSignInButton();
+	@Then("^user with email \"([^\"]*)\" should redirect to home page$")
+	public void user_with_email_should_redirect_to_home_page(String emailid) {
+
+		Assert.assertEquals(topNavigation.getCurrentPageTitle(), PageTitles.HomePageTitle, "Home page is not loaded");
+		Assert.assertEquals(topNavigation.getUserEmail(), emailid, "Invalid email");
 	}
 
-	@Then("^user is on my account page$")
-	public void user_is_on_my_account_page() {
-		String title = driver.getTitle();
-		Assert.assertTrue(title.toLowerCase().contains("my account"));
+	@When("^user enters invalid emailid \"([^\"]*)\" and password \"([^\"]*)\"$")
+	public void user_enters_invalid_emailid_and_password(String emailid, String password) {
+		loginpg = loginpg.unsuccessfulLogin(emailid, password);
+
+	}
+
+	@Then("^error message should be displayed as \"([^\"]*)\"$")
+	public void error_message_should_be_displayed_as(String error_msg) {
+
+		Assert.assertEquals(topNavigation.getCurrentPageTitle(), PageTitles.LoginPageTitle, "Login page is not loaded");
+		Assert.assertEquals(loginpg.getErrorMessageOnInvalidCred(), error_msg, "Error message displayed is incorrect");
 	}
 
 }

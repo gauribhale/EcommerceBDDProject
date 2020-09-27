@@ -4,7 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features = "src/test/java/com/automation/features", 
-glue = {"com.automation.stepdefinition" }, 
+glue = {"com.automation.stepdefinition"}, 
 monochrome = true, 
 plugin = { "pretty",
 			"html:target/cucumber-reports/cucumber-pretty", 
